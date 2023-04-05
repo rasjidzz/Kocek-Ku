@@ -1,6 +1,6 @@
 import React from "react";
 
-class Sidebar extends React.Component {
+class Leftbar extends React.Component {
   render() {
     return (
       <div className="basis-[15%] align-middle border-r-[1.5px] border-[#DFE8F6]">
@@ -39,4 +39,4 @@ class Sidebar extends React.Component {
   }
 }
 
-export default Sidebar;
+export default Leftbar;

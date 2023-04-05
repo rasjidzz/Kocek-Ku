@@ -1,0 +1,65 @@
+import React from "react";
+
+class Transfer extends React.Component {
+  render() {
+    return (
+      <div className="w-[350px]">
+        <hr className="mt-4" />
+        <div className="my-4 font-medium text-base">Quick Transfer</div>
+        <div className="my-2 text-sm text-[#8a95a9]">Send to</div>
+        <div className="flex flex-col gap-2 align-middle">
+          <div className="drop-shadow-xl bg-white rounded-lg mt-2">
+            <div className="flex flex-row my-6 mx-6 justify-between">
+              <div className="flex flex-row gap-4">
+                <div className="my-auto">logo</div>
+                <div className="my-auto text-sm">
+                  <div>Muhammad Zaky</div>
+                  <div className="font-normal mt-1 text-[#8a95a9] text-xs">
+                    @Zaky
+                  </div>
+                </div>
+              </div>
+              <div className="my-auto">
+                <button>button</button>
+              </div>
+            </div>
+          </div>
+          <div className="drop-shadow-xl w-[100%] mt-2 bg-white rounded-lg">
+            <div className="p-4">
+              <div className="text-sm text-[#8a95a9]">Total ammount</div>
+              <div className="flex flex-row">
+                <div className="flex flex-row">
+                  <div className="my-auto text-sm">Rp</div>
+                  <div>
+                    <input
+                      className="p-2 outline-none font-medium text-2xl w-[80%] text-gray-500 "
+                      placeholder="0"
+                      type="number"
+                    />
+                  </div>
+                </div>
+                <div className="my-auto">logo</div>
+              </div>
+            </div>
+          </div>
+          <div className="border-[#8a95a9] h-40">
+            <div>
+              <input
+                type="text"
+                className="p-2 outline-none font-medium w-[80%]"
+                placeholder="tuliskan catatan"
+              />
+            </div>
+          </div>
+          <div className="bg-[#6245D5] p-5 rounded-xl">
+            <div className="text-center text-white font-semibold">
+              Kirim Uang
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Transfer;
