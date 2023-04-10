@@ -33,7 +33,7 @@ class Leftbar extends React.Component {
             <div className="">DashBoard</div>
           </div>
         </div>
-        <div className="mt-40 w-[80%] mx-auto h-[13rem] bg-[#FC9269] hover:bg-[#ff8a5c] rounded-2xl"></div>
+        <div className="mt-44 w-[80%] mx-auto h-[13rem] bg-[#FC9269] hover:bg-[#ff8a5c] rounded-2xl"></div>
       </div>
     );
   }

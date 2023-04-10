@@ -4,7 +4,7 @@ import Transfer from "./RightbarComponent/Transfer";
 class RightBar extends React.Component {
   render() {
     return (
-      <div className="basis-[25%] py-6 px-5 bg-white h-[850px]">
+      <div className="basis-[25%] py-6 px-5 bg-white h-[855px]">
         <div className="flex flex-row justify-between">
           <div className="ml-4">My Card</div>
           <div className="mr-4">change card</div>

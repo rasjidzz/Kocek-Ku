@@ -42,16 +42,19 @@ class Transfer extends React.Component {
               </div>
             </div>
           </div>
-          <div className="border-[#8a95a9] h-40">
-            <div>
-              <input
-                type="text"
-                className="p-2 outline-none font-medium w-[80%]"
-                placeholder="tuliskan catatan"
-              />
+          <div className=" ">
+            <div className="mt-[10px]">
+              <textarea
+                className="block resize-none p-4 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                name=""
+                id=""
+                cols="39"
+                rows="2"
+                placeholder="masukkan"
+              ></textarea>
             </div>
           </div>
-          <div className="bg-[#6245D5] p-5 rounded-xl">
+          <div className="bg-[#6245D5] p-5 rounded-xl mt-4">
             <div className="text-center text-white font-semibold">
               Kirim Uang
             </div>
