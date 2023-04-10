@@ -85,6 +85,15 @@ class DashBoard extends React.Component {
                 <td className="px-6 py-4 whitespace-nowrap">Complete</td>
                 <td className="px-6 py-4 whitespace-nowrap">...</td>
               </tr>
+              <tr>
+                <td className="px-6 py-4 whitespace-nowrap">Jane Doe</td>
+                <td className="px-6 py-4 whitespace-nowrap">28</td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  jane.doe@example.com
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">Complete</td>
+                <td className="px-6 py-4 whitespace-nowrap">...</td>
+              </tr>
             </tbody>
           </table>
         </div>
