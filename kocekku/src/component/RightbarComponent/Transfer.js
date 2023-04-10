@@ -1,4 +1,8 @@
 import React from "react";
+import { NumericFormat } from "react-number-format";
+import { IoPersonCircleSharp } from "react-icons/io5";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { TiDelete } from "react-icons/ti";
 
 class Transfer extends React.Component {
   render() {
@@ -11,7 +15,9 @@ class Transfer extends React.Component {
           <div className="drop-shadow-xl bg-white rounded-lg mt-2">
             <div className="flex flex-row my-6 mx-6 justify-between">
               <div className="flex flex-row gap-4">
-                <div className="my-auto">logo</div>
+                <div className="my-auto text-[40px]">
+                  <IoPersonCircleSharp />
+                </div>
                 <div className="my-auto text-sm">
                   <div>Muhammad Zaky</div>
                   <div className="font-normal mt-1 text-[#8a95a9] text-xs">
@@ -20,7 +26,9 @@ class Transfer extends React.Component {
                 </div>
               </div>
               <div className="my-auto">
-                <button>button</button>
+                <button className="text-2xl">
+                  <IoMdArrowDropdown />
+                </button>
               </div>
             </div>
           </div>
@@ -38,7 +46,9 @@ class Transfer extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="my-auto">logo</div>
+                <div hidden className="my-auto">
+                  <TiDelete />
+                </div>
               </div>
             </div>
           </div>
@@ -50,13 +60,13 @@ class Transfer extends React.Component {
                 id=""
                 cols="39"
                 rows="2"
-                placeholder="masukkan"
+                placeholder="Send Note"
               ></textarea>
             </div>
           </div>
           <div className="bg-[#6245D5] p-5 rounded-xl mt-4">
             <div className="text-center text-white font-semibold">
-              Kirim Uang
+              Send Money
             </div>
           </div>
         </div>
