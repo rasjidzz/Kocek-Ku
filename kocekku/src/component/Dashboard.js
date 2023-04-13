@@ -8,7 +8,9 @@ class DashBoard extends React.Component {
   render() {
     return (
       <div className="flex flex-col mx-auto gap-10 py-6 px-16">
-        <div className="text-[#192252] font-medium text-lg mx-6">Money Insight</div>
+        <div className="text-[#192252] font-medium text-lg mx-6">
+          Money Insight
+        </div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-row justify-between gap-10">
             <div className="flex flex-row gap-20 bg-white p-6 rounded-lg">
