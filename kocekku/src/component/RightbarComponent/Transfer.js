@@ -39,10 +39,13 @@ class Transfer extends React.Component {
                 <div className="flex flex-row">
                   <div className="my-auto text-sm">Rp</div>
                   <div>
-                    <input
-                      className="p-2 outline-none font-medium text-2xl w-[80%] text-gray-500 "
-                      placeholder="0"
-                      type="number"
+                    <NumericFormat
+                      id="inputTf"
+                      className="p-2 outline-none font-medium text-2xl w-[80%]
+                                    text-gray-500 "
+                      placeholder="10.000"
+                      allowLeadingZeros
+                      thousandSeparator=","
                     />
                   </div>
                 </div>
@@ -64,7 +67,7 @@ class Transfer extends React.Component {
               ></textarea>
             </div>
           </div>
-          <div className="bg-[#6245D5] p-5 rounded-xl mt-4">
+          <div className="bg-[#6245D5] cursor-pointer active:bg-[#7859f4] p-5 rounded-xl mt-4 hover:bg-[#704ff5]">
             <div className="text-center text-white font-semibold">
               Send Money
             </div>
