@@ -1,10 +1,11 @@
 import React from "react";
 import Transfer from "./RightbarComponent/Transfer";
-import Request from "./RightbarComponent/Request";
+import Pay from "./RightbarComponent/Pay";
 import { TbArrowMoveUp, TbArrowMoveDown } from "react-icons/tb";
 import { BsPlusCircleFill } from "react-icons/bs";
 import { CgMoreAlt } from "react-icons/cg";
 import { useState } from "react";
+import { MdPayments } from "react-icons/md";
 
 function RightBar() {
   const [activeButton, setActiveButton] = useState("transfer");
@@ -15,9 +16,8 @@ function RightBar() {
 
   return (
     <div className="basis-[25%] py-6 px-5 bg-white h-[855px]">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-start ">
         <div className="ml-4 my-auto">My Card</div>
-        <div className="mr-4 text-sm my-auto cursor-pointer">change card</div>
       </div>
       <div className="h-44 w-[100%] mt-5 rounded-2xl mx-auto bg-[#FC9269]">
         <div className="p-6 text-white">
@@ -59,23 +59,25 @@ function RightBar() {
           <div className="">
             <div
               className={`group cursor-pointer w-[70px] border-2 ${
-                activeButton === "request"
+                activeButton === "pay"
                   ? "w-[70px] border-2  h-[70px] flex justify-center rounded-lg shadow-lg shadow-indigo-200 bg-[#6245D5] border-[#6245D5] text-white"
                   : "border-[#DFE8F6] hover:shadow-xl hover:shadow-indigo-200 hover:bg-[#6245D5]  hover:text-white  transition ease-in-out delay-75 hover:border-[#6245D5] "
               } h-[70px] flex justify-center rounded-lg`}
-              onClick={() => handleActiveButton("request")}
+              onClick={() => {
+                handleActiveButton("pay");
+              }}
             >
               <div className="my-auto text-3xl">
-                <TbArrowMoveDown />
+                <MdPayments />
               </div>
             </div>
             <div
               className={`text-center cursor-pointer mt-3 text-sm transition ease-in-out delay-75 ${
-                activeButton === "request" ? "" : " text-[#8a95a9]"
+                activeButton === "pay" ? "" : " text-[#8a95a9]"
               }`}
-              onClick={() => handleActiveButton("request")}
+              onClick={() => handleActiveButton("pay")}
             >
-              Request
+              Pay
             </div>
           </div>
           <div className="">
@@ -129,13 +131,19 @@ function RightBar() {
             </div>
           </div>
         </div>
+        {/*Fungsinya sesuai tombol yang di klik, defaultnya transfer*/}
         <div className={` ${activeButton === "transfer" ? "" : "hidden"}`}>
           <Transfer />
         </div>
-        <div className={` ${activeButton === "request" ? "" : "hidden"}`}>
-          <Request />
+        <div className={` ${activeButton === "pay" ? "" : "hidden"}`}>
+          <Pay />
         </div>
-        {/*Fungsinya sesuai tombol yang di klik, defaultnya transfer*/}
+        <div className={` ${activeButton === "topup" ? "" : "hidden"}`}>
+          <Pay />
+        </div>
+        <div className={` ${activeButton === "more" ? "" : "hidden"}`}>
+          <Pay />
+        </div>
       </div>
     </div>
   );

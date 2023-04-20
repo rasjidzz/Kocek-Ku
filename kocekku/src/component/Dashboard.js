@@ -5,6 +5,36 @@ import { IoIosArrowForward } from "react-icons/io";
 import { AiFillFilter } from "react-icons/ai";
 
 class DashBoard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const date = new Date();
+    const currentTime = date.getTime();
+
+    this.state = {
+      history: [
+        {
+          account: "Stevent",
+          date: currentTime,
+          amount: 10000,
+          status: "Expense",
+        },
+        {
+          account: "Japran",
+          date: new Date(),
+          amount: 20000,
+          status: "Income",
+        },
+        {
+          account: "Japran",
+          date: new Date(),
+          amount: 20000,
+          status: "Expense",
+        },
+      ],
+    };
+  }
+
   render() {
     return (
       <div className="flex flex-col mx-auto gap-10 py-6 px-16">
@@ -86,78 +116,19 @@ class DashBoard extends React.Component {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200 ">
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Stevent</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">10.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Expenses</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Japran</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">20.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Income</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Japran</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">20.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Income</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Japran</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">20.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Income</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Japran</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">20.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Income</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Japran</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">20.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Income</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Japran</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">20.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Income</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 whitespace-nowrap">Japran</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {new Date().toLocaleString() + ""}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">20.000</td>
-                <td className="px-6 py-4 whitespace-nowrap">Income</td>
-                <td className="px-6 py-4 whitespace-nowrap">...</td>
-              </tr>
+              {this.state.history.map((item, index) => (
+                <tr key={index}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {item.account}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {item.date.toLocaleDateString}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">{item.amount}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">{item.status}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">...</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
