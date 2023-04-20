@@ -4,12 +4,12 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { TiDelete } from "react-icons/ti";
 
-class Transfer extends React.Component {
+class Request extends React.Component {
   render() {
     return (
-      <div className="w-full md:w-[350px]">
+      <div className="w-full sm:w-[350px]">
         <hr className="mt-4" />
-        <div className="my-4 font-medium text-base">Quick Transfer</div>
+        <div className="my-4 font-medium text-base">Quick Request</div>
         <div className="my-2 text-sm text-[#8a95a9]">Send to</div>
         <div className="flex flex-col gap-2 align-middle">
           <div className="drop-shadow-xl bg-white rounded-lg mt-2">
@@ -32,16 +32,16 @@ class Transfer extends React.Component {
               </div>
             </div>
           </div>
-          <div className="drop-shadow-xl w-full md:w-[350px] mt-2 bg-white rounded-lg">
+          <div className="drop-shadow-xl w-full sm:w-[350px] mt-2 bg-white rounded-lg">
             <div className="p-4">
-              <div className="text-sm text-[#8a95a9]">Total amount</div>
+              <div className="text-sm text-[#8a95a9]">Total ammount</div>
               <div className="flex flex-row">
                 <div className="flex flex-row">
                   <div className="my-auto text-sm">Rp</div>
                   <div>
                     <NumericFormat
                       id="inputTf"
-                      className="p-2 outline-none font-medium text-2xl w-full md:w-[80%] text-gray-500"
+                      className="p-2 outline-none font-medium text-2xl w-full sm:w-[80%] text-gray-500 "
                       placeholder="10,000"
                       allowLeadingZeros
                       thousandSeparator=","
@@ -54,10 +54,10 @@ class Transfer extends React.Component {
               </div>
             </div>
           </div>
-          <div className="">
+          <div className=" ">
             <div className="mt-[10px]">
               <textarea
-                className="block resize-none p-4 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                className="block resize-none p-4 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                 name=""
                 id=""
                 cols="39"
@@ -77,4 +77,4 @@ class Transfer extends React.Component {
   }
 }
 
-export default Transfer;
+export default Request;

@@ -57,16 +57,16 @@ class DashBoard extends React.Component {
           <div className="text-[#192252] font-medium text-lg">
             Recent Activity
           </div>
-          <div className="border-spacing-16 border-[#cbcdd6] border-2 p-2 px-4 rounded-xl">
+          <div className="border-spacing-16 group cursor-pointer hover:bg-[#6245D5] border-[#cbcdd6] border-2 p-2 px-4 rounded-xl">
             <div className="flex flex-row gap-2">
-              <div className="my-auto text-xl">
+              <div className="my-auto text-xl group-hover:text-white">
                 <AiFillFilter />
               </div>
-              <div className="">Filter</div>
+              <div className="font-medium group-hover:text-white">Filter</div>
             </div>
           </div>
         </div>
-        <div className="rounded-3xl overflow-x">
+        <div className="">
           <table className="min-w-full divide-y divide-gray-200 ">
             <thead>
               <tr>
@@ -85,7 +85,7 @@ class DashBoard extends React.Component {
                 <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white divide-y divide-gray-200 ">
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">Stevent</td>
                 <td className="px-6 py-4 whitespace-nowrap">
