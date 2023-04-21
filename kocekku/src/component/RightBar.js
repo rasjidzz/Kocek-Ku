@@ -6,6 +6,7 @@ import { BsPlusCircleFill } from "react-icons/bs";
 import { CgMoreAlt } from "react-icons/cg";
 import { useState } from "react";
 import { MdPayments } from "react-icons/md";
+import Topup from "./RightbarComponent/Topup";
 
 function RightBar() {
   const [activeButton, setActiveButton] = useState("transfer");
@@ -139,7 +140,7 @@ function RightBar() {
           <Pay />
         </div>
         <div className={` ${activeButton === "topup" ? "" : "hidden"}`}>
-          <Pay />
+          <Topup />
         </div>
         <div className={` ${activeButton === "more" ? "" : "hidden"}`}>
           <Pay />

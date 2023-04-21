@@ -157,7 +157,7 @@ function Pay() {
         </div>
         <div
           className={`drop-shadow-xl bg-white rounded-lg mt-2 ${
-            activeMerchant === "" ? "" : "hidden"
+            activeMerchant === "blibli" ? "" : "hidden"
           }`}
         >
           <div className="flex flex-row my-[14px] mx-6 justify-between">
@@ -169,14 +169,14 @@ function Pay() {
                 >
                   <img
                     className="rounded-full"
-                    src={require("../../Asset/Merchant/bukalapak.png")}
+                    src={require("../../Asset/Merchant/blibli.png")}
                     width="50"
                     alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
                   />
                 </a>
               </div>
               <div className="my-auto text-base">
-                <div>Bukalapak</div>
+                <div>Blibli</div>
               </div>
             </div>
             <div className="my-auto transition ease-in-out delay-75">
@@ -321,10 +321,10 @@ function Pay() {
                 </div>
                 <div
                   className={`hover:bg-[#e4e4e4] ${
-                    activeMerchant === "bukalapak" ? "hidden" : ""
+                    activeMerchant === "blibli" ? "hidden" : ""
                   }`}
                   onClick={() => {
-                    handleClickMerchant("bukalapak");
+                    handleClickMerchant("blibli");
                     setActiveButton(!activeButton);
                   }}
                 >
@@ -337,14 +337,14 @@ function Pay() {
                         >
                           <img
                             className="rounded-full"
-                            src={require("../../Asset/Merchant/bukalapak.png")}
+                            src={require("../../Asset/Merchant/blibli.png")}
                             width="50"
                             alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
                           />
                         </a>
                       </div>
                       <div className="my-auto text-base">
-                        <div>Bukalapak</div>
+                        <div>Blibli</div>
                       </div>
                     </div>
                   </div>
