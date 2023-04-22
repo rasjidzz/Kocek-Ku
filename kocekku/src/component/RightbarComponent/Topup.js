@@ -111,16 +111,19 @@ function Topup() {
         </div>
         <div className="drop-shadow-xl w-full sm:w-[350px] mt-2 bg-white rounded-lg">
           <div className="p-4">
-            <div className="text-sm text-[#8a95a9]">
-              Enter the Topupment code
+            <div hidden className="text-sm text-[#8a95a9]">
+              Enter phone number
             </div>
-            <div className="flex flex-row">
-              <div className="flex flex-row">
+            <div className="flex flex-row mt-1">
+              <div className="flex flex-col">
+                <label className="text-sm text-[#8a95a9]" htmlFor="">
+                  Enter phone number
+                </label>
                 <div>
                   <input
                     id="inputTf"
-                    className="outline-none mt-1 font-medium text-2xl w-full sm:w-[80%] text-gray-500 "
-                    placeholder="..."
+                    className="outline-none mt-1 font-medium text-xl text-gray-500 "
+                    placeholder="08XXXXXXXXXX"
                   />
                 </div>
               </div>

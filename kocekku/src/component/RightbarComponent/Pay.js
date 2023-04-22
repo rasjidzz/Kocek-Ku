@@ -196,156 +196,154 @@ function Pay() {
               : "hidden"
           }`}
         >
-          <div className="flex flex-col overflow-y-scroll h-56 rounded-lg">
-            <div className="drop-shadow-xl bg-white rounded-lg mt-2">
-              <div className="flex flex-col ">
-                <div
-                  className={`hover:bg-[#e4e4e4] ${
-                    activeMerchant === "tokopedia" ? "hidden" : ""
-                  }`}
-                  onClick={() => {
-                    handleClickMerchant("tokopedia");
-                    setActiveButton(!activeButton);
-                  }}
-                >
-                  <div className="flex flex-row my-[14px] mx-6 justify-between">
-                    <div className="flex flex-row gap-4">
-                      <div className="my-auto text-[40px]">
-                        <a
-                          href="https://www.tokopedia.com/"
-                          title="Image from freepnglogos.com"
-                        >
-                          <img
-                            className="rounded-full"
-                            src={require("../../Asset/Merchant/tokopedia.png")}
-                            width="50"
-                            alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
-                          />
-                        </a>
-                      </div>
-                      <div className="my-auto text-base">
-                        <div>Tokopedia</div>
-                      </div>
+          <div className="flex flex-col overflow-y-scroll h-56 rounded-lg bg-white">
+            <div className="flex flex-col ">
+              <div
+                className={`hover:bg-[#e4e4e4] ${
+                  activeMerchant === "tokopedia" ? "hidden" : ""
+                }`}
+                onClick={() => {
+                  handleClickMerchant("tokopedia");
+                  setActiveButton(!activeButton);
+                }}
+              >
+                <div className="flex flex-row my-[14px] mx-6 justify-between">
+                  <div className="flex flex-row gap-4">
+                    <div className="my-auto text-[40px]">
+                      <a
+                        href="https://www.tokopedia.com/"
+                        title="Image from freepnglogos.com"
+                      >
+                        <img
+                          className="rounded-full"
+                          src={require("../../Asset/Merchant/tokopedia.png")}
+                          width="50"
+                          alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
+                        />
+                      </a>
+                    </div>
+                    <div className="my-auto text-base">
+                      <div>Tokopedia</div>
                     </div>
                   </div>
                 </div>
-                <div
-                  className={`hover:bg-[#e4e4e4] ${
-                    activeMerchant === "shopee" ? "hidden" : ""
-                  }`}
-                  onClick={() => {
-                    handleClickMerchant("shopee");
-                    setActiveButton(!activeButton);
-                  }}
-                >
-                  <div className="flex flex-row my-[14px] mx-6 justify-between">
-                    <div className="flex flex-row gap-4">
-                      <div className="my-auto text-[40px]">
-                        <a
-                          href="https://www.tokopedia.com/"
-                          title="Image from freepnglogos.com"
-                        >
-                          <img
-                            className="rounded-full"
-                            src={require("../../Asset/Merchant/shopee.png")}
-                            width="50"
-                            alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
-                          />
-                        </a>
-                      </div>
-                      <div className="my-auto text-base">
-                        <div>Shopee</div>
-                      </div>
+              </div>
+              <div
+                className={`hover:bg-[#e4e4e4] ${
+                  activeMerchant === "shopee" ? "hidden" : ""
+                }`}
+                onClick={() => {
+                  handleClickMerchant("shopee");
+                  setActiveButton(!activeButton);
+                }}
+              >
+                <div className="flex flex-row my-[14px] mx-6 justify-between">
+                  <div className="flex flex-row gap-4">
+                    <div className="my-auto text-[40px]">
+                      <a
+                        href="https://www.tokopedia.com/"
+                        title="Image from freepnglogos.com"
+                      >
+                        <img
+                          className="rounded-full"
+                          src={require("../../Asset/Merchant/shopee.png")}
+                          width="50"
+                          alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
+                        />
+                      </a>
+                    </div>
+                    <div className="my-auto text-base">
+                      <div>Shopee</div>
                     </div>
                   </div>
                 </div>
-                <div
-                  className={`hover:bg-[#e4e4e4] ${
-                    activeMerchant === "lazada" ? "hidden" : ""
-                  }`}
-                  onClick={() => {
-                    handleClickMerchant("lazada");
-                    setActiveButton(!activeButton);
-                  }}
-                >
-                  <div className="flex flex-row my-[14px] mx-6 justify-between">
-                    <div className="flex flex-row gap-4">
-                      <div className="my-auto text-[40px]">
-                        <a
-                          href="https://www.tokopedia.com/"
-                          title="Image from freepnglogos.com"
-                        >
-                          <img
-                            className="rounded-full"
-                            src={require("../../Asset/Merchant/lazada.png")}
-                            width="50"
-                            alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
-                          />
-                        </a>
-                      </div>
-                      <div className="my-auto text-base">
-                        <div>Lazada</div>
-                      </div>
+              </div>
+              <div
+                className={`hover:bg-[#e4e4e4] ${
+                  activeMerchant === "lazada" ? "hidden" : ""
+                }`}
+                onClick={() => {
+                  handleClickMerchant("lazada");
+                  setActiveButton(!activeButton);
+                }}
+              >
+                <div className="flex flex-row my-[14px] mx-6 justify-between">
+                  <div className="flex flex-row gap-4">
+                    <div className="my-auto text-[40px]">
+                      <a
+                        href="https://www.tokopedia.com/"
+                        title="Image from freepnglogos.com"
+                      >
+                        <img
+                          className="rounded-full"
+                          src={require("../../Asset/Merchant/lazada.png")}
+                          width="50"
+                          alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
+                        />
+                      </a>
+                    </div>
+                    <div className="my-auto text-base">
+                      <div>Lazada</div>
                     </div>
                   </div>
                 </div>
-                <div
-                  className={`hover:bg-[#e4e4e4] ${
-                    activeMerchant === "bukalapak" ? "hidden" : ""
-                  }`}
-                  onClick={() => {
-                    handleClickMerchant("bukalapak");
-                    setActiveButton(!activeButton);
-                  }}
-                >
-                  <div className="flex flex-row my-[14px] mx-6 justify-between">
-                    <div className="flex flex-row gap-4">
-                      <div className="my-auto text-[40px]">
-                        <a
-                          href="https://www.tokopedia.com/"
-                          title="Image from freepnglogos.com"
-                        >
-                          <img
-                            className="rounded-full"
-                            src={require("../../Asset/Merchant/bukalapak.png")}
-                            width="50"
-                            alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
-                          />
-                        </a>
-                      </div>
-                      <div className="my-auto text-base">
-                        <div>Bukalapak</div>
-                      </div>
+              </div>
+              <div
+                className={`hover:bg-[#e4e4e4] ${
+                  activeMerchant === "bukalapak" ? "hidden" : ""
+                }`}
+                onClick={() => {
+                  handleClickMerchant("bukalapak");
+                  setActiveButton(!activeButton);
+                }}
+              >
+                <div className="flex flex-row my-[14px] mx-6 justify-between">
+                  <div className="flex flex-row gap-4">
+                    <div className="my-auto text-[40px]">
+                      <a
+                        href="https://www.tokopedia.com/"
+                        title="Image from freepnglogos.com"
+                      >
+                        <img
+                          className="rounded-full"
+                          src={require("../../Asset/Merchant/bukalapak.png")}
+                          width="50"
+                          alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
+                        />
+                      </a>
+                    </div>
+                    <div className="my-auto text-base">
+                      <div>Bukalapak</div>
                     </div>
                   </div>
                 </div>
-                <div
-                  className={`hover:bg-[#e4e4e4] ${
-                    activeMerchant === "blibli" ? "hidden" : ""
-                  }`}
-                  onClick={() => {
-                    handleClickMerchant("blibli");
-                    setActiveButton(!activeButton);
-                  }}
-                >
-                  <div className="flex flex-row my-[14px] mx-6 justify-between">
-                    <div className="flex flex-row gap-4">
-                      <div className="my-auto text-[40px]">
-                        <a
-                          href="https://www.tokopedia.com/"
-                          title="Image from freepnglogos.com"
-                        >
-                          <img
-                            className="rounded-full"
-                            src={require("../../Asset/Merchant/blibli.png")}
-                            width="50"
-                            alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
-                          />
-                        </a>
-                      </div>
-                      <div className="my-auto text-base">
-                        <div>Blibli</div>
-                      </div>
+              </div>
+              <div
+                className={`hover:bg-[#e4e4e4] ${
+                  activeMerchant === "blibli" ? "hidden" : ""
+                }`}
+                onClick={() => {
+                  handleClickMerchant("blibli");
+                  setActiveButton(!activeButton);
+                }}
+              >
+                <div className="flex flex-row my-[14px] mx-6 justify-between">
+                  <div className="flex flex-row gap-4">
+                    <div className="my-auto text-[40px]">
+                      <a
+                        href="https://www.tokopedia.com/"
+                        title="Image from freepnglogos.com"
+                      >
+                        <img
+                          className="rounded-full"
+                          src={require("../../Asset/Merchant/blibli.png")}
+                          width="50"
+                          alt="tokopedia vector tokopedia raup transaksi triliun per bulan selama"
+                        />
+                      </a>
+                    </div>
+                    <div className="my-auto text-base">
+                      <div>Blibli</div>
                     </div>
                   </div>
                 </div>
