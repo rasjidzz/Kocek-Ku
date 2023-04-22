@@ -10,6 +10,11 @@ import { RiLogoutCircleRFill, RiLogoutCircleRLine } from "react-icons/ri";
 export default function TopBar() {
   const [isActive, setActive] = useState(false);
   const [time, setTime] = useState(new Date());
+  const [showSearch, setShowSearch] = useState(false);
+
+  const handleSearchClick = () => {
+    setShowSearch(!showSearch);
+  };
 
   useEffect(() => {
     const intervalID = setInterval(() => {
@@ -61,8 +66,9 @@ export default function TopBar() {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+
   return (
-    <div className="w-full h-[68px] bg-white border-b-[1.5px] border-[#DFE8F6] flex flex-row justify-between">
+    <div className="w-full h-[68px] bg-white border-b-[1.5px] border-[#DFE8F6] flex flex-row justify-betwen">
       <div className="border-[#DFE8F6] w-[300px] justify-center gap-5 h-full border-r-[1.5px] flex flex-row basis-[20%]">
         <div className="my-auto justify-center font-medium flex flex-col text-sm text-[#192252]">
           <div className="self-end">{time.toLocaleTimeString()}</div>
@@ -72,16 +78,38 @@ export default function TopBar() {
           <IoCalendar />
         </div>
       </div>
-      <div className="div my-auto ml-6 basis-[60%] text-3xl text-[#848fac]">
-        <RiSearch2Line />
+      <div className="ml-6 gap-5 basis-[60%] flex flex-row text-3xl text-[#848fac]">
+        <div className="my-auto cursor-pointer">
+          <RiSearch2Line
+            onClick={handleSearchClick}
+            className={`text-[#848fac] transition-colors ${
+              showSearch ? "text-black" : ""
+            } delay-75`}
+          />
+        </div>
+        <div className="my-auto text-sm">
+          {showSearch && (
+            <input
+              type="text"
+              className="border w-full border-gray-300 px-4 py-2 text-sm rounded-full ml-2 transition-all duration-500"
+              placeholder="Search"
+            />
+          )}
+        </div>
       </div>
       <div className="flex my-auto gap-3 mx-auto">
         <div className="my-auto text-2xl text-[#192252]">
           {" "}
           <TbBellFilled />
         </div>
-        <div className="my-auto text-[50px]">
-          <IoPersonCircleSharp />
+        <div className="my-auto">
+          <div className="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center">
+            <img
+              className="rounded-full border-black border-2 w-10 h-10"
+              src={require("../Asset/dokumenPP.png")}
+              alt="PP"
+            />
+          </div>
         </div>
         <div className="flex flex-col my-auto">
           <div className="text-base inline-flex whitespace-nowrap text-[#192252]">
@@ -101,8 +129,8 @@ export default function TopBar() {
           <div
             className={
               isActive
-                ? "w-44 z-10 cursor-pointer absolute flex flex-row active:bg-[#eaeaea] justify-center gap-3 border-2 right-0 p-2 bg-white"
-                : "hidden "
+                ? "w-32 z-10 cursor-pointer absolute text-base font-medium flex flex-row active:bg-[#eaeaea] justify-center rounded gap-2 border-2 right-0 py-2 bg-white"
+                : "hidden"
             }
           >
             <div className="my-auto">

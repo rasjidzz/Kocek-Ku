@@ -11,6 +11,8 @@ import Topup from "./RightbarComponent/Topup";
 function RightBar() {
   const [activeButton, setActiveButton] = useState("transfer");
 
+  const a = 126000;
+
   const handleActiveButton = (button) => {
     setActiveButton(button);
   };
@@ -23,11 +25,16 @@ function RightBar() {
       <div className="h-44 w-[100%] mt-5 rounded-2xl mx-auto bg-[#FC9269]">
         <div className="p-6 text-white">
           <div>My Balance</div>
-          <div>$64,200.00</div>
+          <div>
+            {a.toLocaleString("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            })}
+          </div>
           <div className="mt-6">Muhammad Zaky</div>
           <div className="flex flex-row justify-between">
-            <div className="">1302-2213-0670-2210</div>
-            <div className="">Visa</div>
+            <div className="">089623882192</div>
+            <div className="">Koceku</div>
           </div>
         </div>
         {/*Tombol Fungsi*/}
@@ -142,9 +149,7 @@ function RightBar() {
         <div className={` ${activeButton === "topup" ? "" : "hidden"}`}>
           <Topup />
         </div>
-        <div className={` ${activeButton === "more" ? "" : "hidden"}`}>
-          <Pay />
-        </div>
+        <div className={` ${activeButton === "more" ? "" : "hidden"}`}></div>
       </div>
     </div>
   );

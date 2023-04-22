@@ -12,7 +12,7 @@ class Leftbar extends React.Component {
       <div className="basis-[15%] align-middle border-r-[1.5px] border-[#DFE8F6]">
         <div className="flex h-[68px]">
           <div className="my-auto mx-auto font-bold text-xl text-[#6245D5]">
-            Kocek-Ku
+            Koceku
           </div>
         </div>
         <div className="grid grid-cols mt-8 gap-5 ml-4">

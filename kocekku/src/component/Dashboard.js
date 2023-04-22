@@ -4,6 +4,26 @@ import { IoIosArrowForward } from "react-icons/io";
 
 import { AiFillFilter } from "react-icons/ai";
 
+const logoLoc = [
+  { key: "dana", value: require("../Asset/ewallet&credit/dana.png") },
+  { key: "gopay", value: require("../Asset/ewallet&credit/gopay.png") },
+  {
+    key: "shopeepay",
+    value: require("../Asset/ewallet&credit/shopeepay.png"),
+  },
+  { key: "ovo", value: require("../Asset/ewallet&credit/ovo.png") },
+  {
+    key: "telkomsel",
+    value: require("../Asset/ewallet&credit/telkomsel.png"),
+  },
+  { key: "tri", value: require("../Asset/ewallet&credit/tri.png") },
+  { key: "tokopedia", value: require("../Asset/Merchant/tokopedia.png") },
+  { key: "lazada", value: require("../Asset/Merchant/lazada.png") },
+  { key: "blibli", value: require("../Asset/Merchant/blibli.png") },
+  { key: "shopee", value: require("../Asset/Merchant/shopee.png") },
+  { key: "bukalapak", value: require("../Asset/Merchant/bukalapak.png") },
+];
+
 class DashBoard extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +57,7 @@ class DashBoard extends React.Component {
         {
           type: "transfer",
           account: "kocekku",
-          name: "Asep",
+          name: "Asep safrudin bakri",
           noHandphone: "081234567890",
           paymentNumber: "",
           date: "22 Apr 2023, 09:12",
@@ -50,7 +70,7 @@ class DashBoard extends React.Component {
         {
           type: "topup",
           account: "Gopay",
-          name: "Japran",
+          name: "Japran hafis samsul",
           noHandphone: "082345678901",
           paymentNumber: generateRandomString(12),
           date: "22 Apr 2023, 10:23",
@@ -63,7 +83,7 @@ class DashBoard extends React.Component {
         {
           type: "transfer",
           account: "kocekku",
-          name: "Budi",
+          name: "Budi pekerti",
           noHandphone: "087654321098",
           paymentNumber: "",
           date: "22 Apr 2023, 12:56",
@@ -206,7 +226,7 @@ class DashBoard extends React.Component {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="sticky top-0 bg-gray-50 z-10">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Account
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -229,20 +249,41 @@ class DashBoard extends React.Component {
             <tbody className="bg-white divide-y divide-gray-200">
               {this.state.history.map((item, index) => (
                 <tr key={index}>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="py-4 border-r-[1px] whitespace-nowrap cursor-pointer">
+                    {logoLoc.map((logo) => (
+                      <React.Fragment key={logo.key}>
+                        {item.account.toLowerCase() ===
+                        logo.key.toLowerCase() ? (
+                          <img
+                            className="w-12 mx-auto"
+                            src={logo.value}
+                            alt=""
+                          />
+                        ) : (
+                          ""
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap cursor-pointer">
                     {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4 whitespace-nowrap cursor-pointer">
                     {item.type === "pay"
                       ? item.account.charAt(0).toUpperCase() +
                         item.account.slice(1)
                       : item.name.charAt(0).toUpperCase() + item.name.slice(1)}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">{item.date}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4 whitespace-nowrap cursor-pointer">
+                    {item.date}
+                  </td>
+                  <td
+                    className={`px-6 py-4 whitespace-nowrap cursor-pointer ${
+                      item.status === "Expense"
+                        ? "text-red-500"
+                        : "text-green-500"
+                    }`}
+                  >
                     {item.status === "Expense" ? "-" : "+"}
                     {item.amount.toLocaleString("id-ID", {
                       style: "currency",
