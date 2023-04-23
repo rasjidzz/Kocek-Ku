@@ -5,7 +5,7 @@ import { TiDelete } from "react-icons/ti";
 import { useState } from "react";
 
 function Topup() {
-  const [activeWallet, setActiveWallet] = useState(3);
+  const [activeWallet, setActiveWallet] = useState(0);
   const [activeButton, setActiveButton] = useState(false);
 
   const listWallet = ["Dana", "Gopay", "Shopeepay", "OVO", "Telkomsel", "Tri"];

@@ -25,7 +25,7 @@ const logoLoc = [
   { key: "koceku", value: require("../Asset/ewallet&credit/koceku.png") },
 ];
 
-class DashBoard extends React.Component {
+class Transaction extends React.Component {
   constructor(props) {
     super(props);
 
@@ -165,57 +165,20 @@ class DashBoard extends React.Component {
   render() {
     return (
       <div className="flex flex-col mx-auto gap-10 py-6 px-16">
-        <div className="text-[#192252] font-medium text-lg mx-6">
-          Money Insight
-        </div>
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-row justify-between gap-10">
-            <div className="flex flex-row gap-20 bg-white p-6 rounded-lg">
-              <div className="flex flex-col gap-3">
-                <div className="text-base text-[#848fac]">Total Income</div>
-                <div className="text-2xl font-medium text-[#192252]">
-                  {" "}
-                  <span className="text-base text-[#192252]">Rp.</span> 126.000
-                </div>
-              </div>
-              <div className="my-auto text-[#848fac]">
-                <IoIosArrowForward />
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row justify-between gap-10">
-            <div className="flex flex-row gap-20 bg-white p-6 rounded-lg">
-              <div className="flex flex-col gap-3">
-                <div className="text-base text-[#848fac]">Total Expense</div>
-                <div className="text-2xl font-medium text-[#192252]">
-                  {" "}
-                  <span className="text-base text-[#192252]">Rp.</span> 226.000
-                </div>
-              </div>
-              <div className="my-auto text-[#848fac]">
-                <IoIosArrowForward />
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row justify-between gap-10">
-            <div className="flex flex-row gap-20 bg-white p-6 rounded-lg">
-              <div className="flex flex-col gap-3">
-                <div className="text-base text-[#848fac]">Total Saved</div>
-                <div className="text-2xl font-medium text-[#192252]">
-                  {" "}
-                  <span className="text-base text-[#192252]">Rp.</span> 126.000
-                </div>
-              </div>
-              <div className="my-auto text-[#848fac]"></div>
-            </div>
-          </div>
-        </div>
         <div className="flex flex-row justify-between mx-6 ">
-          <div className="text-[#192252] font-medium text-lg">
-            Recent Activity
+          <div className="text-[#192252] my-auto font-medium text-lg">
+            History Transaction
+          </div>
+          <div className="border-spacing-16 group cursor-pointer hover:bg-[#6245D5] border-[#cbcdd6] border-2 p-2 px-4 rounded-xl">
+            <div className="flex flex-row gap-2">
+              <div className="my-auto text-xl group-hover:text-white">
+                <AiFillFilter />
+              </div>
+              <div className="font-medium group-hover:text-white">Filter</div>
+            </div>
           </div>
         </div>
-        <div className="overflow-y-auto h-[500px]">
+        <div className="overflow-y-auto h-[730px]">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="sticky top-0 bg-gray-50 z-10">
               <tr>
@@ -294,4 +257,4 @@ class DashBoard extends React.Component {
   }
 }
 
-export default DashBoard;
+export default Transaction;
