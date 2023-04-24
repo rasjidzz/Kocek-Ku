@@ -26,6 +26,11 @@ const logoLoc = [
 ];
 
 class Transaction extends React.Component {
+  addTransaction = (transaction) => {
+    this.setState((prevState) => ({
+      history: [...prevState.history, transaction],
+    }));
+  };
   constructor(props) {
     super(props);
 

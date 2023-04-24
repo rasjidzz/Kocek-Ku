@@ -29,28 +29,31 @@ class Leftbar extends React.Component {
   render() {
     return (
       <div className="basis-[15%] align-middle border-r-[1.5px] border-[#DFE8F6]">
-        <div className="flex h-[68px]">
-          <div className="my-auto mx-auto font-bold text-xl text-[#6245D5]">
-            Koceku
-          </div>
+        <div className="flex flex-row h-[68px] justify-center">
+          <img
+            className="w-10 h-10 my-auto"
+            src={require("../Asset/ewallet&credit/koceku.png")}
+            alt=""
+          />
+          <div className="my-auto font-bold text-xl text-[#6245D5]">Koceku</div>
         </div>
-        <div className="grid grid-cols mt-8 gap-5 ml-4">
+        <div className="grid grid-cols 2xl:mt-8 xl:mt-6 gap-5 mx-4">
           {this.state.navList.map((nav, index) => (
             <div
               key={index}
-              className={`flex flex-row cursor-pointer w-[20vh] py-4 px-4 rounded-md ${
+              className={`flex gap-3 flex-row cursor-pointer w-[20vh] 2xl:p-6 xl:py-4 xl:px-3 lg:p-2 justify-start rounded-md ${
                 this.state.activeIndex === index
                   ? "bg-[#6245D5] text-white"
                   : "text-[#A69FAD] group hover:bg-[#6245D5] hover:text-white"
               }`}
               onClick={() => this.handleNavClick(index)}
             >
-              <div className="basis-5 pr-3 my-auto text-2xl">{nav.logo}</div>
-              <div className="">{nav.name}</div>
+              <div className="my-auto xl:text-2xl">{nav.logo}</div>
+              <div className="my-auto xl:block xl:text-base">{nav.name}</div>
             </div>
           ))}
         </div>
-        <div className="mt-44 w-[80%] mx-auto h-[13rem] bg-[#FC9269] hover:bg-[#ff8a5c] rounded-2xl"></div>
+        <div className="xl:mt-30 hidden w-[80%] mx-auto h-[13rem] bg-[#FC9269] hover:bg-[#ff8a5c] rounded-2xl"></div>
       </div>
     );
   }

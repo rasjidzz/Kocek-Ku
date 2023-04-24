@@ -68,9 +68,18 @@ export default function TopBar() {
   }, []);
 
   return (
-    <div className="w-full h-[68px] bg-white border-b-[1.5px] border-[#DFE8F6] flex flex-row justify-betwen">
-      <div className="border-[#DFE8F6] w-[300px] justify-center gap-5 h-full border-r-[1.5px] flex flex-row basis-[20%]">
-        <div className="my-auto justify-center font-medium flex flex-col text-sm text-[#192252]">
+    <div className="w-full h-[68px] bg-white border-b-[1.5px] border-[#DFE8F6] flex flex-row justify-between">
+      <div className="xl:hidden flex sm:block basis-[10%] w-auto h-full border-r-[1.5px] border-[#DFE8F6]">
+        <div className="flex items-center">
+          <img
+            className="w-15 h-15 my-auto"
+            src={require("../Asset/ewallet&credit/koceku.png")}
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="border-[#DFE8F6] w-[300px] justify-center gap-5 h-full border-r-[1.5px] flex flex-row xl:basis-[30%] 2xl:basis-[20%] lg:basis-[50%]">
+        <div className="my-auto justify-center font-medium flex flex-col 2xl:text-md text-[#192252]">
           <div className="self-end">{time.toLocaleTimeString()}</div>
           <div>{date}</div>
         </div>

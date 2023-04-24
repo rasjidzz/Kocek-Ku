@@ -7,34 +7,36 @@ import { CgMoreAlt } from "react-icons/cg";
 import { useState } from "react";
 import { MdPayments } from "react-icons/md";
 import Topup from "./RightbarComponent/Topup";
+import { Saved } from "./Dashboard";
 
 function RightBar() {
   const [activeButton, setActiveButton] = useState("transfer");
-
-  const a = 126000;
 
   const handleActiveButton = (button) => {
     setActiveButton(button);
   };
 
   return (
-    <div className="basis-[25%] py-6 px-5 bg-white h-[855px]">
+    <div className="2xl:py-6 xl:py-4 px-5 bg-white h-[855px]">
       <div className="flex flex-row justify-start ">
-        <div className="ml-4 my-auto">My Card</div>
+        <div className="ml-4 my-auto font-medium">My Card</div>
       </div>
-      <div className="h-44 w-[100%] mt-5 rounded-2xl mx-auto bg-[#FC9269]">
-        <div className="p-6 text-white">
-          <div>My Balance</div>
-          <div>
-            {a.toLocaleString("id-ID", {
-              style: "currency",
-              currency: "IDR",
-            })}
-          </div>
-          <div className="mt-6">Muhammad Zaky</div>
-          <div className="flex flex-row justify-between">
-            <div className="">089623882192</div>
-            <div className="">Koceku</div>
+      <div className="w-[100%] xl:mt-4 mx-auto">
+        <div className="bg-orange-400 rounded-2xl">
+          <div className="p-6 text-white">
+            <div>My Balance</div>
+            <div className="text-2xl my-4">
+              {Saved.toLocaleString("id-ID", {
+                style: "currency",
+                currency: "IDR",
+              })}
+            </div>
+            <hr />
+            <div className="mt-4">Muhammad Zaky Fathurahim</div>
+            <div className="flex flex-row justify-between">
+              <div className="">089623882192</div>
+              <div className="">Koceku</div>
+            </div>
           </div>
         </div>
         {/*Tombol Fungsi*/}
